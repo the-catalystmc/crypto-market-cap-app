@@ -1,0 +1,15 @@
+.Currency-Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Currency-Picture {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.Currency-Picture img{
+width: 100px;
+}

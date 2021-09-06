@@ -1,12 +1,28 @@
+import React from 'react';
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Header from './components/Header';
+import Currencies from './components/Currencies';
+import Stats from './components/Stats';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <NavBar />
-      <Header />
-    </div>
+      <Switch>
+        <Route path="/currencies">
+          <Currencies />
+        </Route>
+        <Route path="/stats">
+          <Stats />
+        </Route>
+        <Redirect from="/" to="/currencies" />
+      </Switch>
+    </Router>
   );
 }
 
