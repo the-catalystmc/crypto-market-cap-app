@@ -1,0 +1,19 @@
+.Header-Container {
+    display: flex;
+    align-items: center;
+}
+
+.Header-Picture {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.Header-Picture img{
+width: 100px;
+}
+
+.Header-Name {
+    align-items: center;
+}
