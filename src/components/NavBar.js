@@ -17,4 +17,13 @@ const NavBar = () => {
     )
 }
 
+const Heading = () => {
+    if (home) {
+        return (
+            <p>Top 10 CryptoCurrencies</p>
+        )
+    }
+    return <p>Currency Stats</p>
+}
+
 export default NavBar;

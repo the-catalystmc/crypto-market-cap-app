@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
-import Header from "./Header";
+import Header from "../Header";
 import Currency from "./Currency";
 
 function Currencies() {

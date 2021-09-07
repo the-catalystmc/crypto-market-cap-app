@@ -6,7 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Currencies from './components/Currencies';
+import Currencies from './components/cryptos/Currencies';
 import Stats from './components/Stats';
 
 function App() {
