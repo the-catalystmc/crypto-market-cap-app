@@ -1,3 +1,4 @@
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/crypto.png';
 import { FiArrowRightCircle } from "react-icons/fi";
 

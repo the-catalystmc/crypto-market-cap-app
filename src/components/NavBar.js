@@ -1,10 +1,13 @@
+import { NavLink, Link } from 'react-router-dom';
 import '../scss/style.scss';
 import { FaAngleLeft, FaMicrophone, FaCog } from "react-icons/fa";
 
 const NavBar = () => {
     return (
         <div className="NavBar-Container">
-            <p><FaAngleLeft /> 2021</p>
+            <p><NavLink className="a-nav" to="/">
+            <FaAngleLeft />
+            </NavLink> 2021</p>
             <p>Top 10 CryptoCurrencies</p>
             <div>
                 <i><FaMicrophone /></i>

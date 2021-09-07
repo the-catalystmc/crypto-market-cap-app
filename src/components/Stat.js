@@ -1,3 +1,5 @@
+import { NavLink, Link } from 'react-router-dom';
+
 const Stat = () => {
     return (
         <div className="Stat-Container">
