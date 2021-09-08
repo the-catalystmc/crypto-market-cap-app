@@ -1,4 +1,13 @@
+.Currency {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+    }
+}
+
 .Currency-Container {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     background-color: #fb5092;
@@ -10,11 +19,31 @@
 
 .Currency-Picture {
     display: flex;
-    align-items: center;
-    width: 50%;
-    text-align: center;
+    flex-direction: column;
+    // align-items: center;
+    // text-align: center;
+    height: 100px;
+    width: 100%;
+
+    .Arrow {
+        align-self: flex-end;
+    }
+
+    .Symbol {
+        display: flex;
+        height: 100%;
+        padding-top: 20px;
+        align-items: center;
+        align-self: center;
+
+        h2 {
+            color: #992e58;
+        }
+    }
 }
 
-.Currency-Picture img{
-width: 100px;
+.Currency-Name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

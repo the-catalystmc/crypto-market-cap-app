@@ -25,18 +25,18 @@ function Currencies() {
   }
 
   return (
-    <div>
+    <div className="Home">
       <div className="Header-Container">
         <div className="Header-Picture">
           <img src={logo} alt="Logo" />
         </div>
         <div className="Header-Name">
           <h2>CryptoCurrencies</h2>
-          <p>{marketTotal()} <br /> Market Capitalization</p>
+          <p>{`$${marketTotal()}`} <br /> Market Capitalization</p>
         </div>
       </div>
       <div>
-        <h3 className="Currency-Stats">STATS BY CURRENCY</h3>
+        <h4 className="Currency-Stats">STATS BY CURRENCY</h4>
         {currencyStatus}
         <ul className="Currencies">
           {allCurrencies.map((currency) => (

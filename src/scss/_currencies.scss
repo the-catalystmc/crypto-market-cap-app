@@ -1,3 +1,25 @@
+
+@mixin breakpoint($point) {
+    @if $point == small {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+  
+    @if $point == medium {
+      @media (min-width: 768px) {
+        @content;
+      }
+    }
+  
+    @if $point == large {
+      @media (min-width: 992px) {
+        @content;
+      }
+    }
+  }
+  
+
 .Currency-Stats {
     background-color: #ec4c8b;
 }
@@ -5,4 +27,14 @@
 .Currencies {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    // @include breakpoint(medium) {
+    //     grid-template-columns: 33.3% 33.3% 33.3%;
+    //   }
+  
+    //   @include breakpoint(large) {
+    //     grid-template-columns: 20% 20% 20% 20% 20%;
+    //     grid-template-rows: 50% 50%;
+    // }
 }

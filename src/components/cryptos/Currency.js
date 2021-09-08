@@ -29,12 +29,14 @@ const Currency = ({ currency }) => {
             >
                 <div className="Currency-Container">
                     <div className="Currency-Picture">
-                        <img src={image} alt="Logo" />
-                        <FiArrowRightCircle />
+                    <FiArrowRightCircle className="Arrow" />
+                        <div className="Symbol">
+                        <h2>{symbol.toUpperCase()}</h2>
+                        </div>
                     </div>
                     <div className="Currency-Name">
-                        <h4>{name}</h4>
-                        <p>{marketCap}</p>
+                        <h3>{name}</h3>
+                        <p>{`$${marketCap}`}</p>
                     </div>
                 </div>
             </Link>
