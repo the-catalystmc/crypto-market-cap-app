@@ -89,7 +89,7 @@ export const getStatRequest = () => ({
     loading: false,
     currency: [],
     error: '',
-    home: false,
+    home: true,
     stats: [],
   };
   

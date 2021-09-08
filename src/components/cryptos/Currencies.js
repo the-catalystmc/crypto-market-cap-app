@@ -24,25 +24,6 @@ function Currencies() {
     return total;
   }
 
-  // const currency = allCurrencies.find(
-  //   (currency) => currency.id.toString() === match.params.id.toString(),
-  // );
-
-  // const handleClick = (e) => {
-  //   const element = e.target.id;
-  //   const newCurrency = allCurrencies.filter((currency) => element === currency.id);
-  //   console.log(newCurrency, e.target.id);
-  //   dispatch(statPageSuccess(newCurrency))
-  // }
-
-  // let { path, url } = useRouteMatch();
-
-  // const updateCurrencies = allCurrencies.map((currency) => <li key={currency.id} ><NavLink key={currency.id} to={`${url}/${currency.id}`}><Currency key={currency.id} currency={currency} /></NavLink></li>);
-  // const updateCurrencies = allCurrencies.map((currency) => <li key={currency.id} ><NavLink key={currency.id} to="/stats">
-  //   <Currency handleClick={handleClick} key={currency.id} currency={currency} />
-  //   </NavLink>
-  //   </li>);
-
   return (
     <div>
       <div className="Header-Container">
