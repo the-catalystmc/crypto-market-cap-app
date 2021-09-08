@@ -17,11 +17,11 @@ const NavBar = () => {
 const Heading = ({ home }) => {
     if (!home) {
         return (
-            <div className="NavBar-Container2">
+            <div className="NavBar-Container">
                 <p>2021</p>
                 <p className="NavBar-Title">Top 10 CryptoCurrencies</p>
                 <div>
-                    <i><FaMicrophone /></i>
+                    <i className="Mic"><FaMicrophone /></i>
                     <i><FaCog /></i>
                 </div>
             </div>
@@ -30,13 +30,13 @@ const Heading = ({ home }) => {
     return (
         <div className="NavBar-Container">
             <p>
-                <NavLink className="a-nav" to="/">
+                <NavLink to="/">
                     <FaAngleLeft />
                 </NavLink>
             </p>
             <p>Currency Stats</p>
             <div>
-                <i><FaMicrophone /></i>
+                <i className="Mic"><FaMicrophone /></i>
                 <i><FaCog /></i>
             </div>
         </div>
