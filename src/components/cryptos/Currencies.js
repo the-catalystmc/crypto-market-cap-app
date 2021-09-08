@@ -36,7 +36,7 @@ function Currencies() {
         </div>
       </div>
       <div>
-        <h3>STATS BY CURRENCY</h3>
+        <h3 className="Currency-Stats">STATS BY CURRENCY</h3>
         {currencyStatus}
         <ul className="Currencies">
           {allCurrencies.map((currency) => (

@@ -11,6 +11,7 @@ import Stats from './components/Stats';
 
 function App() {
   return (
+    <div className="App">
     <Router>
       <NavBar />
       <Switch>
@@ -21,6 +22,7 @@ function App() {
         <Redirect from="/" to="/currencies" />
       </Switch>
     </Router>
+    </div>
   );
 }
 

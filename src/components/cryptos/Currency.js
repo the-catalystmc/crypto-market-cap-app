@@ -18,7 +18,7 @@ const Currency = ({ currency }) => {
 
     return (
         //Wrap in NavLink to ID
-        <li>
+        <li className="Currency">
             <Link 
             key={id} 
             to={`/details/${id}`}

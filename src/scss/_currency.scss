@@ -1,7 +1,12 @@
 .Currency-Container {
     display: flex;
     flex-direction: column;
+    background-color: #fb5092;
 }
+
+// .Currency-Container:nth-of-type(2n + 1) {
+//     background-color: lightgray;
+//   }
 
 .Currency-Picture {
     display: flex;
