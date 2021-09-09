@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/crypto-market-cap-app/static/css/main.2ce75020.chunk.css",
-    "main.js": "/crypto-market-cap-app/static/js/main.cd6a59d9.chunk.js",
-    "main.js.map": "/crypto-market-cap-app/static/js/main.cd6a59d9.chunk.js.map",
+    "main.css": "/crypto-market-cap-app/static/css/main.19caab0f.chunk.css",
+    "main.js": "/crypto-market-cap-app/static/js/main.2b600afc.chunk.js",
+    "main.js.map": "/crypto-market-cap-app/static/js/main.2b600afc.chunk.js.map",
     "runtime-main.js": "/crypto-market-cap-app/static/js/runtime-main.78d746e4.js",
     "runtime-main.js.map": "/crypto-market-cap-app/static/js/runtime-main.78d746e4.js.map",
-    "static/js/2.7f12e7e5.chunk.js": "/crypto-market-cap-app/static/js/2.7f12e7e5.chunk.js",
-    "static/js/2.7f12e7e5.chunk.js.map": "/crypto-market-cap-app/static/js/2.7f12e7e5.chunk.js.map",
+    "static/js/2.b2786c61.chunk.js": "/crypto-market-cap-app/static/js/2.b2786c61.chunk.js",
+    "static/js/2.b2786c61.chunk.js.map": "/crypto-market-cap-app/static/js/2.b2786c61.chunk.js.map",
     "index.html": "/crypto-market-cap-app/index.html",
-    "static/css/main.2ce75020.chunk.css.map": "/crypto-market-cap-app/static/css/main.2ce75020.chunk.css.map",
-    "static/js/2.7f12e7e5.chunk.js.LICENSE.txt": "/crypto-market-cap-app/static/js/2.7f12e7e5.chunk.js.LICENSE.txt",
+    "static/css/main.19caab0f.chunk.css.map": "/crypto-market-cap-app/static/css/main.19caab0f.chunk.css.map",
+    "static/js/2.b2786c61.chunk.js.LICENSE.txt": "/crypto-market-cap-app/static/js/2.b2786c61.chunk.js.LICENSE.txt",
     "static/media/crypto1.d5c3a47f.svg": "/crypto-market-cap-app/static/media/crypto1.d5c3a47f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.78d746e4.js",
-    "static/js/2.7f12e7e5.chunk.js",
-    "static/css/main.2ce75020.chunk.css",
-    "static/js/main.cd6a59d9.chunk.js"
+    "static/js/2.b2786c61.chunk.js",
+    "static/css/main.19caab0f.chunk.css",
+    "static/js/main.2b600afc.chunk.js"
   ]
 }
