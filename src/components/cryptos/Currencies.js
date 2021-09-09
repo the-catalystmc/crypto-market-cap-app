@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import logo from '../../assets/crypto.png';
+import logo from '../../assets/crypto1.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import Currency from "./Currency";
 import { fetchCurrency, statPageSuccess } from "../../redux/currencies";
