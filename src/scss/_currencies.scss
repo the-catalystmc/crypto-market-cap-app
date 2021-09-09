@@ -10,7 +10,7 @@
 .Currencies {
   display: grid;
   grid-template-columns: 50% 50%;
-//   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  //   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
   li:nth-child(8n-7) {
     background-color: #fb5092;
