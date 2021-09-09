@@ -4,7 +4,7 @@ const GET_CURRENCY_REQUEST = 'GET_CURRENCY_REQUEST';
 const GET_CURRENCY_SUCCESS = 'GET_CURRENCY_SUCCESS';
 const GET_CURRENCY_FAILURE = 'GET_CURRENCY_FAILURE';
 const HOMEPAGE_SUCCESS = 'HOMEPAGE_SUCCESS';
-const GET_STATS_REQUEST = 'GET_STATS_REQUEST';
+const FILTER_CURRENCY = 'FILTER_CURRENCY';
 const STATPAGE_SUCCESS = 'STATPAGE_SUCCESS';
 
 export const getCurrencyRequest = () => ({
@@ -21,13 +21,9 @@ export const getCurrencyFailure = (error) => ({
   payload: error,
 });
 
-//   export const homePageSuccess = (item) => ({
-//     type: HOMEPAGE_SUCCESS,
-//     payload: item,
-//   });
-
-export const getStatRequest = () => ({
-  type: GET_STATS_REQUEST,
+export const filterCurrency = (payload) => ({
+  type: FILTER_CURRENCY,
+  payload,
 });
 
 export const statPageSuccess = (payload) => ({
@@ -85,12 +81,45 @@ export const fetchStats = () => (dispatch) => {
     });
 };
 
+const filtering = (data, value) => {
+  let result;
+  if (value === 'all') {
+    result = data;
+  } else if (value === '200000000000') {
+    result = data.filter((coin) => coin.marketCap >= 20000000000 && coin.marketCap < 30000000000);
+    // console.log(value);
+    // console.log(data);
+  } else if (value === '300000000000') {
+    result = data.filter((coin) => {
+      console.log(coin);
+      coin.marketCap >= 30000000000 && coin.marketCap <= 40000000000
+    });
+  } else if (value === '400000000000') {
+    result = data.filter((coin) => coin.marketCap >= 40000000000 && coin.marketCap < 5000000000);
+  } else if (value === '500000000000') {
+    result = data.filter((coin) => coin.marketCap >= 50000000000 && coin.marketCap < 6000000000);
+  } else if (value === '600000000000') {
+    result = data.filter((coin) => coin.marketCap >= 60000000000 && coin.marketCap < 7000000000);
+  } else if (value === '700000000000') {
+    result = data.filter((coin) => coin.marketCap >= 70000000000 && coin.marketCap < 8000000000);
+  } else if (value === '800000000000') {
+    result = data.filter((coin) => coin.marketCap >= 80000000000 && coin.marketCap < 9000000000);
+  }
+  else {
+    result = data.filter((coin) => coin.marketCap >= 9000000000000);
+  }
+  console.log(result);
+  return result;
+};
+
 export const initialState = {
   loading: false,
   currency: [],
   error: '',
   home: true,
-  stats: [],
+  value: 'all',
+  filtered: [],
+  data: [],
 };
 
 const currencyReducer = (state = initialState, action) => {
@@ -104,6 +133,14 @@ const currencyReducer = (state = initialState, action) => {
         loading: true,
         currency: action.payload,
         error: '',
+      };
+
+    case FILTER_CURRENCY:
+      return {
+        ...state,
+        value: action.payload.value,
+        data: action.payload.data,
+        filtered: filtering(action.payload.data, action.payload.value),
       };
 
     case GET_CURRENCY_FAILURE:

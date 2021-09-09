@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import logo from '../../assets/crypto1.svg';
 import Currency from './Currency';
-import { fetchCurrency, statPageSuccess } from '../../redux/currencies';
+import { fetchCurrency, statPageSuccess, filterCurrency } from '../../redux/currencies';
 import Filter from '../Filter';
 
 function Currencies() {
   const allCurrencies = useSelector((state) => state.currency.currency);
+  const filteredCurrencies = useSelector((state) => state.currency.filtered);
   const currencyStatus = useSelector((state) => state.currency.loading);
   const dispatch = useDispatch();
 
@@ -16,6 +17,12 @@ function Currencies() {
     }
     dispatch(statPageSuccess(false));
   }, []);
+
+  const handleSelection = (e) => {
+    dispatch(filterCurrency({ value: e.target.value, data: allCurrencies }));
+  };
+
+  let renderedItems = filteredCurrencies.length === 0 ? allCurrencies : filteredCurrencies;
 
   const marketTotal = () => {
     let total = 0;
@@ -44,12 +51,13 @@ function Currencies() {
       </div>
       <div>
         <div className="Currency-Stats">
-        <h4 className="Currency-Stats1">STATS BY CURRENCY</h4>
-        <Filter />
+          <h4 className="Currency-Stats1">STATS BY CURRENCY</h4>
+          <Filter handleSelection={handleSelection} />
         </div>
         {currencyStatus}
+        {/* <CurrenciesHolder allCurrencies={allCurrencies} filteredCurrencies={filteredCurrencies} /> */}
         <ul className="Currencies">
-          {allCurrencies.map((currency) => (
+          {renderedItems.map((currency) => (
             <Currency key={currency.id} currency={currency} />
           ))}
         </ul>
