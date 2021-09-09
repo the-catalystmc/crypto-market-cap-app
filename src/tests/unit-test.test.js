@@ -9,7 +9,9 @@ test('test to return the initial state', () => {
     currency: [],
     error: '',
     home: true,
-    stats: [],
+    value: 'all',
+    filtered: [],
+    data: [],
   });
 });
 
