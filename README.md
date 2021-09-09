@@ -15,7 +15,7 @@ This is a mobile web application that displays the total market capital of the t
 
 # Screenshots
 
-![screenshot](./download.png)
+![screenshot](./download.jpeg)
 
 ## Live Demo
 
