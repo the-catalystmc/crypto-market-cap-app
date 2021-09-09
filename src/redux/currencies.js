@@ -103,7 +103,6 @@ const filtering = (data, value) => {
   else {
     result = data.filter((coin) => coin.marketCap >= 9000000000000);
   }
-  console.log(result);
   return result;
 };
 
