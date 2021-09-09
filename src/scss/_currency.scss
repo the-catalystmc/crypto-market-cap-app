@@ -1,5 +1,6 @@
 .Currency {
     list-style: none;
+    // background-color: red;
 
     a {
         text-decoration: none;
@@ -10,7 +11,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #fb5092;
+    // background-color: #fb5092;
 }
 
 // .Currency-Container:nth-of-type(2n + 1) {
@@ -37,8 +38,10 @@
         align-items: center;
         align-self: center;
 
-        h2 {
+        p {
             color: #992e58;
+            font-size: 33px;
+            font-weight: bold;
         }
     }
 }
@@ -47,4 +50,5 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 20px;
 }

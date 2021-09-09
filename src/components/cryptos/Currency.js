@@ -17,7 +17,6 @@ const Currency = ({ currency }) => {
     } = currency;
 
     return (
-        //Wrap in NavLink to ID
         <li className="Currency">
             <Link 
             key={id} 
@@ -31,11 +30,11 @@ const Currency = ({ currency }) => {
                     <div className="Currency-Picture">
                     <FiArrowRightCircle className="Arrow" />
                         <div className="Symbol">
-                        <h2>{symbol.toUpperCase()}</h2>
+                        <p>{symbol.toUpperCase()}</p>
                         </div>
                     </div>
                     <div className="Currency-Name">
-                        <h3>{name}</h3>
+                        <h2>{name}</h2>
                         <p>{`$${marketCap}`}</p>
                     </div>
                 </div>

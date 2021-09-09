@@ -5,11 +5,11 @@ const Stat = ({ currency }) => {
 
     return (
             <ul className="Stat-Container">
-                <li><h3>Rank</h3><p>{rank}</p></li>
-                <li><h3>Price</h3><p>{price}</p></li>
-                <li><h3>24 Hour Low</h3><p>{low}</p></li>
-                <li><h3>24 Hour High</h3><p>{high}</p></li>
-                <li><h3>Total Volume</h3><p>{totalVolume}</p></li>
+                <li><h2>Rank</h2><p>{rank}</p></li>
+                <li><h2>Price</h2><p>{`$${price}`}</p></li>
+                <li><h2>24 Hour Low</h2><p>{`$${low}`}</p></li>
+                <li><h2>24 Hour High</h2><p>{`$${high}`}</p></li>
+                <li><h2>Total Volume</h2><p>{totalVolume}</p></li>
             </ul>
     )
 }

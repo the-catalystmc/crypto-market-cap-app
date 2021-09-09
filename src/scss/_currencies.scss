@@ -1,53 +1,76 @@
-
 @mixin breakpoint($point) {
-    @if $point == small {
-      @media (max-width: 767px) {
-        @content;
-      }
-    }
-  
-    @if $point == medium {
-      @media (min-width: 768px) {
-        @content;
-      }
-    }
-  
-    @if $point == large {
-      @media (min-width: 992px) {
-        @content;
-      }
+  @if $point == small {
+    @media (max-width: 767px) {
+      @content;
     }
   }
 
-  .Header-Container {
-    padding: 10px 20px;
-
-  }
-
-  .Header-Picture {
-    
-    img {
-        color: red;
+  @if $point == medium {
+    @media (min-width: 768px) {
+      @content;
     }
   }
-  
+
+  @if $point == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}
+
+.Header-Container {
+  padding: 10px 20px;
+}
 
 .Currency-Stats {
-    background-color: #ec4c8b;
-    padding: 2px 10px;
+  background-color: #ec4c8b;
+  padding: 2px 10px;
 }
 
 .Currencies {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
-    // @include breakpoint(medium) {
-    //     grid-template-columns: 33.3% 33.3% 33.3%;
-    //   }
-  
-    //   @include breakpoint(large) {
-    //     grid-template-columns: 20% 20% 20% 20% 20%;
-    //     grid-template-rows: 50% 50%;
-    // }
+  li:nth-child(8n-7) {
+    background-color: #fb5092;
+  }
+
+  li:nth-child(8n-6) {
+    background-color: #ec4c8b;
+  }
+
+  li:nth-child(8n-5) {
+    background-color: #ec4c8b;
+  }
+
+  li:nth-child(8n-4) {
+    background-color: #fb5092;
+  }
+
+  li:nth-child(8n-3) {
+    background-color: #fb5092;
+  }
+
+  li:nth-child(8n-2) {
+    background-color: #ec4c8b;
+  }
+
+  li:nth-child(8n-1) {
+    background-color: #ec4c8b;
+  }
+
+  li:nth-child(8n) {
+    background-color: #fb5092;
+  }
+
+
+  // @include breakpoint(medium) {
+  //     grid-template-columns: 33.3% 33.3% 33.3%;
+  //   }
+
+  //   @include breakpoint(large) {
+  //     grid-template-columns: 20% 20% 20% 20% 20%;
+  //     grid-template-rows: 50% 50%;
+  // }
 }
