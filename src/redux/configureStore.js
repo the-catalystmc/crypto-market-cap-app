@@ -7,6 +7,6 @@ export const reducer = combineReducers({
   currency: currencyReducer,
 });
 
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;
