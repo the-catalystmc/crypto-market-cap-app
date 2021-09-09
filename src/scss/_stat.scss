@@ -1,0 +1,17 @@
+.All-Stats {
+  height: 75vh;
+}
+
+.Stat-Container {
+  padding: 10px;
+  background-color: #fb5092;
+  height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

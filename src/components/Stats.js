@@ -36,8 +36,8 @@ const Stats = ({ match }) => {
                     <p>{currency.marketCap} <br /> Market Capitalization</p>
                 </div>
             </div>
-            <div>
-                <h3>STATS BY CURRENCY</h3>
+            <div className='All-Stats'>
+                <h3 className="Currency-Stats">STATS BY CURRENCY</h3>
                 <Stat currency={currency} />
             </div>
         </div>
