@@ -20,7 +20,7 @@ This is a mobile web application that displays the total market capital of the t
 ## Live Demo
 
 You can see my page live here:
-[Check it out!](https://the-catalystmc.github.io/space-travelers-hub/)
+[Check it out!](https://the-catalystmc.github.io/crypto-market-cap-app/#/currencies)
 
 ## Getting Started
 
@@ -40,6 +40,9 @@ To run tests `npm test` can be used.
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/the-catalystmc/crypto-market-cap-app/issues).
+
+## Acknowledgment
+Original design idea by Nelson Sakwa on Behance.
 
 ## Show your support
 
