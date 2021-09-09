@@ -8,6 +8,7 @@ import Filter from '../Filter';
 function Currencies() {
   const allCurrencies = useSelector((state) => state.currency.currency);
   const filteredCurrencies = useSelector((state) => state.currency.filtered);
+  const data = useSelector((state) => state.currency.data);
   const currencyStatus = useSelector((state) => state.currency.loading);
   const dispatch = useDispatch();
 
@@ -22,7 +23,7 @@ function Currencies() {
     dispatch(filterCurrency({ value: e.target.value, data: allCurrencies }));
   };
 
-  let renderedItems = filteredCurrencies.length === 0 ? allCurrencies : filteredCurrencies;
+  let renderedItems = filteredCurrencies.length === 0 && data.length === 0 ? allCurrencies : filteredCurrencies;
 
   const marketTotal = () => {
     let total = 0;
@@ -55,7 +56,6 @@ function Currencies() {
           <Filter handleSelection={handleSelection} />
         </div>
         {currencyStatus}
-        {/* <CurrenciesHolder allCurrencies={allCurrencies} filteredCurrencies={filteredCurrencies} /> */}
         <ul className="Currencies">
           {renderedItems.map((currency) => (
             <Currency key={currency.id} currency={currency} />
