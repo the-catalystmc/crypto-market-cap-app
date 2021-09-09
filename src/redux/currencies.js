@@ -99,8 +99,7 @@ const filtering = (data, value) => {
     result = data.filter((coin) => coin.marketCap >= 70000000000 && coin.marketCap < 80000000000);
   } else if (value === '80000000000') {
     result = data.filter((coin) => coin.marketCap >= 80000000000 && coin.marketCap < 90000000000);
-  }
-  else {
+  } else {
     result = data.filter((coin) => coin.marketCap >= 9000000000000);
   }
   return result;

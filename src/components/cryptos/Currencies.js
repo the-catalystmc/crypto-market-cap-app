@@ -23,7 +23,8 @@ function Currencies() {
     dispatch(filterCurrency({ value: e.target.value, data: allCurrencies }));
   };
 
-  let renderedItems = filteredCurrencies.length === 0 && data.length === 0 ? allCurrencies : filteredCurrencies;
+  const renderedItems = filteredCurrencies.length === 0
+   && data.length === 0 ? allCurrencies : filteredCurrencies;
 
   const marketTotal = () => {
     let total = 0;
