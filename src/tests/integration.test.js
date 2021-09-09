@@ -1,8 +1,7 @@
- 
 import React from 'react';
 import {
-    BrowserRouter as Router,
-  } from 'react-router-dom';
+  BrowserRouter as Router,
+} from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
@@ -11,24 +10,24 @@ import App from '../App';
 import Stat from '../components/Stat';
 
 describe('Test Details component', () => {
-    const currency = {
-        rank: 1, 
-        low: 10, 
-        high: 50, 
-        price: 40,
-        marketCap: 1000,
-        totalVolume: 500,
-    };
-    render(
-      <Router>
-        <Stat currency={currency} />
-      </Router>,
-    );
-  
-    test('Expect price 40 to be rendered', () => {
-      expect(screen.getByText('$40')).toBeInTheDocument();
-    });
+  const currency = {
+    rank: 1,
+    low: 10,
+    high: 50,
+    price: 40,
+    marketCap: 1000,
+    totalVolume: 500,
+  };
+  render(
+    <Router>
+      <Stat currency={currency} />
+    </Router>,
+  );
+
+  test('Expect price 40 to be rendered', () => {
+    expect(screen.getByText('$40')).toBeInTheDocument();
   });
+});
 
 describe('Check if all components are rendered', () => {
   test('Renders NavBar', () => {

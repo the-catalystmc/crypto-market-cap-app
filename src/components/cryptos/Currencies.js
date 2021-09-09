@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import logo from '../../assets/crypto1.svg';
 import { useSelector, useDispatch } from 'react-redux';
-import Currency from "./Currency";
-import { fetchCurrency, statPageSuccess } from "../../redux/currencies";
+import logo from '../../assets/crypto1.svg';
+import Currency from './Currency';
+import { fetchCurrency, statPageSuccess } from '../../redux/currencies';
 
 function Currencies() {
   const allCurrencies = useSelector((state) => state.currency.currency);
@@ -18,11 +18,11 @@ function Currencies() {
 
   const marketTotal = () => {
     let total = 0;
-    for (let i = 0; i < allCurrencies.length; i++) {
+    for (let i = 0; i < allCurrencies.length; i += 1) {
       total += allCurrencies[i].marketCap;
     }
     return total;
-  }
+  };
 
   return (
     <div className="Home">
@@ -32,7 +32,13 @@ function Currencies() {
         </div>
         <div className="Header-Name">
           <h2>CryptoCurrencies</h2>
-          <p>{`$${marketTotal()}`} <br /> Market Capitalization</p>
+          <p>
+            {`$${marketTotal()}`}
+            {' '}
+            <br />
+            {' '}
+            Market Capitalization
+          </p>
         </div>
       </div>
       <div>
@@ -45,7 +51,7 @@ function Currencies() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default Currencies;
