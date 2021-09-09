@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import logo from '../../assets/crypto1.svg';
 import Currency from './Currency';
 import { fetchCurrency, statPageSuccess } from '../../redux/currencies';
+import Filter from '../Filter';
 
 function Currencies() {
   const allCurrencies = useSelector((state) => state.currency.currency);
@@ -42,7 +43,10 @@ function Currencies() {
         </div>
       </div>
       <div>
-        <h4 className="Currency-Stats">STATS BY CURRENCY</h4>
+        <div className="Currency-Stats">
+        <h4 className="Currency-Stats1">STATS BY CURRENCY</h4>
+        <Filter />
+        </div>
         {currencyStatus}
         <ul className="Currencies">
           {allCurrencies.map((currency) => (
