@@ -1,0 +1,12 @@
+.NavBar-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: #ec4c8b;
+
+  .Mic {
+    margin-right: 20px;
+  }
+}
